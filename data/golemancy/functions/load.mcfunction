@@ -1,0 +1,4 @@
+scoreboard objectives add golemancy_aquanaut_grappling_block dummy
+scoreboard objectives add golemancy_sentinel_level dummy
+scoreboard objectives add golemancy_steam_active dummy
+scoreboard objectives add golemancy_tinker_launched dummy

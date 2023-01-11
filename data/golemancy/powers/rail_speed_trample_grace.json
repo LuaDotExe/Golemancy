@@ -1,0 +1,37 @@
+{
+	"type": "origins:multiple",
+	"duration": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 3,
+		"start_value": 3,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"tick": {
+		"type": "origins:action_over_time",
+		"interval": 20,
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "golemancy:rail_speed_trample_grace_duration",
+			"change": -1
+		}
+	},
+	"remove": {
+		"type": "origins:action_over_time",
+		"interval": 2,
+		"rising_action": {
+			"type": "origins:revoke_power",
+			"power": "golemancy:rail_speed_trample_grace",
+			"source": "golemancy:steam_powered"
+		},
+		"condition": {
+			"type": "origins:resource",
+			"resource": "golemancy:rail_speed_trample_grace_duration",
+			"comparison": "==",
+			"compare_to": 0
+		}
+	},
+	"hidden": true
+}

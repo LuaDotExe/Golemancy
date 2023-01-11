@@ -1,0 +1,12 @@
+{
+    "type": "origins:action_on_callback",
+    "entity_action_added": {
+        "type": "origins:execute_command",
+        "command": "scale delay set pehkui:step_height 0"
+    },
+    "entity_action_lost": {
+        "type": "origins:execute_command",
+        "command": "scale delay set pehkui:step_height 20"
+    },
+    "hidden": true
+}

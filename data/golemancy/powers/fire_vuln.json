@@ -1,0 +1,36 @@
+{
+	"type": "origins:multiple",
+	"fire": {
+		"type": "origins:modify_damage_taken",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 1
+		},
+		"damage_condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:name",
+					"name": "inFire"
+				},
+				{
+					"type": "origins:name",
+					"name": "onFire"
+				}
+			]
+		}
+	},
+	"lava": {
+		"type": "origins:modify_damage_taken",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		},
+		"damage_condition": {
+			"type": "origins:name",
+			"name": "lava"
+		}
+	},
+	"name": "Melting Point",
+	"description": "You take double damage from fire."
+}

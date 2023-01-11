@@ -1,0 +1,198 @@
+{
+	"type": "origins:multiple",
+	"phasing": {
+		"type": "origins:phasing",
+		"block_condition": {
+			"type": "origins:in_tag",
+			"tag": "golemancy:plant_phasing"
+		},
+		"render_type": "none",
+		"phase_down_condition": {
+			"type": "origins:and",
+			"conditions": [
+            {
+                "type": "origins:sneaking"
+            },
+            {
+                "type": "origins:on_block"
+            }
+			]
+		},
+		"condition": {
+			"type": "origins:power_active",
+			"power": "golemancy:camouflage_toggle"
+		}
+	},
+	"stealth": {
+		"type": "origins:invisibility",
+		"render_armor": true,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:in_block_anywhere",
+					"block_condition": {
+						"type": "origins:in_tag",
+						"tag": "golemancy:plant_phasing"
+					},
+					"compare_to": 1,
+					"comparison": ">="
+				},
+				{
+					"type": "origins:power_active",
+					"power": "golemancy:camouflage_toggle"
+				}
+			]
+		}
+	},
+	"toggle": {
+		"type": "origins:toggle"
+	},
+	"overlay_close": {
+		"type": "origins:overlay",
+		"texture": "minecraft:textures/misc/powder_snow_outline.png",
+		"strength": 0.24,
+		"red": 0.0,
+		"green": 1.0,
+		"blue": 0.0,
+		"draw_mode": "texture",
+		"draw_phase": "above_hud",
+		"visible_in_third_person": true,
+		"hide_with_hud": false,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:power_active",
+					"power": "golemancy:camouflage_toggle"
+				},
+				{
+					"type": "origins:block_in_radius",
+					"block_condition": {
+						"type": "origins:in_tag",
+						"tag": "golemancy:plant_phasing"
+					},
+					"radius": 3,
+					"compare_to": 1,
+					"comparison": ">="
+				}
+			]
+		}
+	},
+	"overlay_mid": {
+		"type": "origins:overlay",
+		"texture": "minecraft:textures/misc/powder_snow_outline.png",
+		"strength": 0.16,
+		"red": 0.0,
+		"green": 1.0,
+		"blue": 0.0,
+		"draw_mode": "texture",
+		"draw_phase": "above_hud",
+		"visible_in_third_person": true,
+		"hide_with_hud": false,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:power_active",
+					"power": "golemancy:camouflage_toggle"
+				},
+				{
+					"type": "origins:block_in_radius",
+					"block_condition": {
+						"type": "origins:in_tag",
+						"tag": "golemancy:plant_phasing"
+					},
+					"radius": 5,
+					"compare_to": 1,
+					"comparison": ">="
+				},
+				{
+					"type": "origins:block_in_radius",
+					"block_condition": {
+						"type": "origins:in_tag",
+						"tag": "golemancy:plant_phasing"
+					},
+					"radius": 3,
+					"compare_to": 1,
+					"comparison": ">=",
+					"inverted": true
+				}
+			]
+		}
+	},
+	"overlay_far": {
+		"type": "origins:overlay",
+		"texture": "minecraft:textures/misc/powder_snow_outline.png",
+		"strength": 0.08,
+		"red": 0.0,
+		"green": 1.0,
+		"blue": 0.0,
+		"draw_mode": "texture",
+		"draw_phase": "above_hud",
+		"visible_in_third_person": true,
+		"hide_with_hud": false,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:power_active",
+					"power": "golemancy:camouflage_toggle"
+				},
+				{
+					"type": "origins:block_in_radius",
+					"block_condition": {
+						"type": "origins:in_tag",
+						"tag": "golemancy:plant_phasing"
+					},
+					"radius": 7,
+					"compare_to": 1,
+					"comparison": ">="
+				},
+				{
+					"type": "origins:block_in_radius",
+					"block_condition": {
+						"type": "origins:in_tag",
+						"tag": "golemancy:plant_phasing"
+					},
+					"radius": 5,
+					"compare_to": 1,
+					"comparison": ">=",
+					"inverted": true
+				}
+			]
+		}
+	},
+    "compat_visibility": {
+        "type": "origins:action_over_time",
+        "interval": 3,
+        "rising_action": {
+            "type": "origins:execute_command",
+            "command": "scale set pehkui:visibility 0"
+        },
+        "falling_action": {
+            "type": "origins:execute_command",
+            "command": "scale set pehkui:visibility 1"
+        },
+        "condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:in_block_anywhere",
+					"block_condition": {
+						"type": "origins:in_tag",
+						"tag": "golemancy:plant_phasing"
+					},
+					"compare_to": 1,
+					"comparison": ">="
+				},
+				{
+					"type": "origins:power_active",
+					"power": "golemancy:camouflage_toggle"
+				}
+			]
+		}
+    },
+	"name": "Camouflage",
+	"description": "You can move freely through foliage, and become invisible while inside of it."
+}

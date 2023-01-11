@@ -1,0 +1,34 @@
+{
+    "type": "origins:multiple",
+    "timer": {
+        "type": "origins:cooldown",
+        "cooldown": 140000,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "wake": {
+        "type": "origins:action_on_wake_up",
+        "entity_action": {
+            "type": "origins:delay",
+            "ticks": 1,
+            "action": {
+                "type": "origins:trigger_cooldown",
+                "power": "golemancy:less_sleep_timer"
+            }
+        }
+    },
+    "prevent": {
+        "type": "origins:prevent_sleep",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "golemancy:less_sleep_timer",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "set_spawn_point": true,
+        "message": "You're not tired enough to sleep."
+    },
+    "name": "Unceasing Engine",
+    "description": "It takes nearly 6 times longer for you to feel tired enough to rest."
+}

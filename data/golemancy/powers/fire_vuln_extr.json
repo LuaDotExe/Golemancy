@@ -1,0 +1,76 @@
+{
+	"type": "origins:multiple",
+	"fire": {
+		"type": "origins:modify_damage_taken",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 2
+		},
+		"damage_condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:name",
+					"name": "inFire"
+				},
+				{
+					"type": "origins:name",
+					"name": "onFire"
+				}
+			]
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:biome",
+					"condition": {
+						"type": "origins:precipitation",
+						"precipitation": "snow"
+					}
+				},
+				{
+					"type": "origins:predicate",
+					"predicate": "golemancy:raining"
+				},
+				{
+					"type": "origins:exposed_to_sky"
+				}
+			],
+			"inverted": true
+		}
+	},
+	"lava": {
+		"type": "origins:modify_damage_taken",
+		"modifier": {
+			"operation": "multiply_total",
+			"value": 0.5
+		},
+		"damage_condition": {
+			"type": "origins:name",
+			"name": "lava"
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:biome",
+					"condition": {
+						"type": "origins:precipitation",
+						"precipitation": "snow"
+					}
+				},
+				{
+					"type": "origins:predicate",
+					"predicate": "golemancy:raining"
+				},
+				{
+					"type": "origins:exposed_to_sky"
+				}
+			],
+			"inverted": true
+		}
+	},
+	"name": "Frigid",
+	"description": "You take triple damage from fire while outside of snowy weather, and cannot freeze to death."
+}

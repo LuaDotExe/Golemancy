@@ -1,0 +1,15 @@
+{
+	"powers": [
+		"golemancy:aquabatics",
+		"golemancy:grappling_hook",
+		"golemancy:water_climbing",
+		"golemancy:sink",
+		"golemancy:pressurized",
+		"golemancy:water_slip"
+	],
+	"icon": "minecraft:water_bucket",
+	"order": 688,
+	"impact": 2,
+	"name": "Aquanaut",
+	"description": "A living diving suit, designed to traverse the ocean floor."
+}

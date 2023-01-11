@@ -1,0 +1,44 @@
+{
+    "type": "origins:multiple",
+    "normal": {
+        "type": "origins:modify_crafting",
+        "recipe": "minecraft:rail",
+        "result": {
+            "item": "minecraft:rail",
+            "amount": 24
+        }
+    },
+    "normal_fix": {
+        "type": "origins:recipe",
+        "recipe": {
+            "id": "golemancy:rail",
+            "type": "minecraft:crafting_shaped",
+            "pattern": [
+                "X X",
+                "X#X",
+                "X X"
+            ],
+            "key": {
+                "#": {
+                    "item": "minecraft:stick"
+                },
+                "X": {
+                    "item": "minecraft:iron_ingot"
+                }
+            },
+            "result": {
+                "item": "minecraft:rail",
+                "count": 24
+            }
+        }
+    },
+    "powered": {
+        "type": "origins:modify_crafting",
+        "recipe": "minecraft:powered_rail",
+        "result": {
+            "item": "minecraft:powered_rail",
+            "amount": 9
+        }
+    },
+    "hidden": true
+}

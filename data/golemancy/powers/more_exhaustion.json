@@ -1,0 +1,45 @@
+{
+    "type": "origins:multiple",
+    "normal": {
+        "type": "origins:modify_exhaustion",
+        "modifier": {
+            "name": "Smokestack",
+            "value": 0.6,
+            "operation": "multiply_base"
+        },
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:command",
+                    "command": "scoreboard players get @s golemancy_steam_active",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "golemancy:rail_speed_timer",
+                    "comparison": ">",
+                    "compare_to": 160
+                }
+            ],
+            "inverted": true
+        }
+    },
+    "rail_speed": {
+        "type": "origins:modify_exhaustion",
+        "modifier": {
+            "name": "Smokestack",
+            "value": 0.3,
+            "operation": "multiply_base"
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "golemancy:rail_speed_timer",
+            "comparison": ">",
+            "compare_to": 160
+        }
+    },
+    "name": "Smokestack",
+    "description": "Your body is less efficient, requiring you to eat more."
+}

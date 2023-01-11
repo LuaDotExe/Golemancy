@@ -1,0 +1,42 @@
+{
+    "type": "origins:action_on_entity_use",
+    "bientity_action": {
+        "type": "origins:actor_action",
+        "action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:give",
+                    "stack": {
+                        "item": "minecraft:snowball"
+                    }
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:block.snow.break",
+                    "volume": 0.4,
+                    "pitch": 1.2
+                }
+            ]
+        }
+    },
+    "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": {
+            "tag": "golemancy:shovels"
+        }
+    },
+    "held_item_action": {
+        "type": "origins:damage",
+        "amount": 1
+    },
+    "bientity_condition": {
+        "type": "origins:target_condition",
+        "condition": {
+            "type": "origins:origin",
+            "layer": "origins:origin",
+            "origin": "moborigins:snowgolem"
+        }
+    },
+    "hidden": true
+}

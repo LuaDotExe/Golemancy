@@ -1,0 +1,17 @@
+{
+	"replace": false,
+	"origins": [
+		"golemancy:sentinel",
+		"golemancy:copper_golem",
+		"golemancy:frosted_golem",
+		"golemancy:tinkerer",
+		"golemancy:living_doll",
+		"golemancy:magmatist",
+		"golemancy:globetrotter",
+		"golemancy:aquanaut",
+		"golemancy:glass_golem",
+		"golemancy:overgrolem",
+		"golemancy:golem_golem",
+		"golemancy:steam_powered"
+	]
+}

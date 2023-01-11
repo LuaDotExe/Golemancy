@@ -1,0 +1,149 @@
+{
+	"type": "origins:multiple",
+	"slow": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.movement_speed",
+			"operation": "multiply_base",
+			"value": -0.35,
+			"name": "Pressurized Move Slow"
+		},
+		"condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "feet",
+					"item_condition": {
+						"type": "origins:enchantment",
+						"enchantment": "minecraft:depth_strider",
+						"comparison": "==",
+						"compare_to": 0
+					}
+				},
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:fluid_height",
+							"fluid": "minecraft:water",
+							"comparison": ">",
+							"compare_to": 0
+						},
+						{
+							"type": "origins:in_rain"
+						}
+					],
+					"inverted": true
+				}
+			]
+		}
+	},
+	"slow_air_land": {
+		"type": "origins:modify_air_speed",
+		"modifier": {
+			"operation": "multiply_base",
+			"value": -0.35,
+			"name": "Pressurized Move Slow"
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:fluid_height",
+					"fluid": "minecraft:water",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:in_rain",
+					"inverted": true
+				}
+			]
+		}
+	},
+	"depth_strider_1": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.movement_speed",
+			"operation": "multiply_base",
+			"value": -0.25,
+			"name": "Pressurized Move Slow"
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "feet",
+					"item_condition": {
+						"type": "origins:enchantment",
+						"enchantment": "minecraft:depth_strider",
+						"comparison": "==",
+						"compare_to": 1
+					}
+				},
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:fluid_height",
+							"fluid": "minecraft:water",
+							"comparison": ">",
+							"compare_to": 0
+						},
+						{
+							"type": "origins:in_rain"
+						}
+					]
+				}
+			]
+		}
+	},
+	"depth_strider_2": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.movement_speed",
+			"operation": "multiply_base",
+			"value": -0.15,
+			"name": "Pressurized Move Slow"
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:equipped_item",
+					"equipment_slot": "feet",
+					"item_condition": {
+						"type": "origins:enchantment",
+						"enchantment": "minecraft:depth_strider",
+						"comparison": "==",
+						"compare_to": 2
+					}
+				},
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:fluid_height",
+							"fluid": "minecraft:water",
+							"comparison": ">",
+							"compare_to": 0
+						},
+						{
+							"type": "origins:in_rain"
+						}
+					]
+				}
+			]
+		}
+	},
+	"name": "Pressurized",
+	"description": "You move slower.",
+	"badges": [
+		{
+			"sprite": "origins:textures/gui/badge/star.png",
+			"text": "The effects of Depth Strider can overcome this while in water."
+		}
+	]
+}

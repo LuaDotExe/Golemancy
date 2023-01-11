@@ -1,0 +1,56 @@
+{
+	"type": "origins:multiple",
+	"thorns": {
+		"type": "origins:invulnerability",
+		"damage_condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:name",
+					"name": "cactus"
+				},
+				{
+					"type": "origins:name",
+					"name": "thorns"
+				},
+				{
+					"type": "origins:name",
+					"name": "sweetBerryBush"
+				}
+			]
+		}
+	},
+	"phasing": {
+		"type": "origins:phasing",
+		"block_condition": {
+			"type": "origins:block",
+			"block": "minecraft:sweet_berry_bush"
+		}
+	},
+	"falling": {
+		"type": "origins:invulnerability",
+		"damage_condition": {
+			"type": "origins:name",
+			"name": "fall"
+		},
+		"condition": {
+			"type": "origins:in_block",
+			"block_condition": {
+				"type": "origins:offset",
+				"y": -1,
+				"condition": {
+					"type": "origins:in_tag",
+					"tag": "minecraft:leaves"	
+				}
+			}
+		}
+	},
+	"name": "Careful",
+	"description": "You're immune to thorny plants.",
+	"badges": [
+		{
+			"sprite": "origins:textures/gui/badge/star.png",
+			"text": "Falling on leaves also negates fall damage."
+		}
+	]
+}

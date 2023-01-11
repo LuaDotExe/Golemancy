@@ -1,0 +1,9 @@
+{
+    "type": "origins:action_over_time",
+    "interval": 1,
+    "entity_action": {
+        "type": "origins:execute_command",
+        "command": "execute as @e[type=item,distance=..8] run data merge entity @s {Invulnerable:1b}"
+    },
+    "hidden": true
+}

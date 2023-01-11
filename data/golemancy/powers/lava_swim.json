@@ -1,0 +1,148 @@
+{
+	"type": "origins:multiple",
+	"swim": {
+		"type": "origins:swimming",
+		"condition": {
+			"type": "origins:in_block",
+			"block_condition": {
+				"type": "origins:block",
+				"block": "minecraft:lava"
+			}
+		}
+	},
+	"lava_speed": {
+		"type": "origins:conditioned_attribute",
+		"tick_rate": 2,
+		"update_health": false,
+		"modifiers": [
+		{
+			"attribute": "additionalentityattributes:lava_speed",
+			"value": 0.4,
+			"operation": "addition"
+		},
+		{
+			"attribute": "additionalentityattributes:lava_visibility",
+			"value": 16,
+			"operation": "addition"
+		},
+		{
+			"attribute": "additionalentityattributes:water_speed",
+			"value": 1.5,
+			"operation": "multiply_base"
+		}
+		],
+		"condition": {
+			"type": "origins:in_block_anywhere",
+			"block_condition": {
+				"type": "origins:fluid",
+				"fluid_condition": {
+					"type": "origins:in_tag",
+					"tag": "minecraft:lava"
+				}
+			},
+			"comparison": ">=",
+			"compare_to": 1
+		}
+	},
+	"immune": {
+		"type": "origins:fire_immunity"
+	},
+	"fall": {
+		"type": "origins:modify_falling",
+		"velocity": 0.005,
+		"take_fall_damage": false,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+			{
+				"type": "origins:swimming",
+				"inverted": true
+			},
+			{
+				"type": "origins:in_block_anywhere",
+				"block_condition": {
+					"type": "origins:fluid",
+					"fluid_condition": {
+						"type": "origins:in_tag",
+						"tag": "minecraft:lava"
+					}
+				},
+				"comparison": ">=",
+				"compare_to": 1
+			},
+			{
+				"type": "origins:sneaking",
+				"inverted": true
+			}
+			]
+		}
+	},
+	"fall_fast": {
+		"type": "origins:modify_falling",
+		"velocity": 0.45,
+		"take_fall_damage": false,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+			{
+				"type": "origins:swimming",
+				"inverted": true
+			},
+			{
+				"type": "origins:in_block_anywhere",
+				"block_condition": {
+					"type": "origins:fluid",
+					"fluid_condition": {
+						"type": "origins:in_tag",
+						"tag": "minecraft:lava"
+					}
+				},
+				"comparison": ">=",
+				"compare_to": 1
+			},
+			{
+				"type": "origins:sneaking"
+			}
+			]
+		}
+	},
+	"move": {
+		"type": "origins:attribute_modify_transfer",
+		"class": "modify_air_speed",
+		"attribute": "minecraft:generic.movement_speed",
+		"multiplier": 1.5,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+			{
+				"type": "origins:swimming",
+				"inverted": true
+			},
+			{
+				"type": "origins:in_block_anywhere",
+				"block_condition": {
+					"type": "origins:fluid",
+					"fluid_condition": {
+						"type": "origins:in_tag",
+						"tag": "minecraft:lava"
+					}
+				},
+				"comparison": ">=",
+				"compare_to": 1
+			}
+			]
+		}
+	},
+	"name": "Boiling Body",
+	"description": "You can swim through lava with dramatically increased control, and are immune to fire.",
+	"badges": [
+	{
+		"sprite": "origins:textures/gui/badge/info.png",
+		"text": "Swim through lava at high speeds, or access creative flight while submerged."
+	},
+	{
+		"sprite": "origins:textures/gui/badge/star.png",
+		"text": "Nearby items are made invincible."
+	}
+	]
+}

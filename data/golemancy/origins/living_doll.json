@@ -1,0 +1,14 @@
+{
+	"powers": [
+		"golemancy:cotton_guard",
+		"golemancy:synthetic_stomach",
+		"golemancy:doll_regen",
+		"golemancy:fire_vuln",
+		"golemancy:soft_body"
+	],
+	"icon": "minecraft:white_wool",
+	"order": 683,
+	"impact": 2,
+	"name": "Living Doll",
+	"description": "An animated doll, which can sew itself back together."
+}

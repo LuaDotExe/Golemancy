@@ -1,0 +1,8 @@
+{
+    "type": "origins:replace_loot_table",
+    "replace": {
+        "minecraft:chests/bastion_other": "golemancy:chests/bastion_other",
+        "minecraft:chests/bastion_treasure": "golemancy:chests/bastion_treasure"
+    },
+    "hidden": true
+}

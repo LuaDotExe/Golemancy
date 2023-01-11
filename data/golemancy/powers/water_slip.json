@@ -1,0 +1,19 @@
+{
+    "type": "origins:modify_slipperiness",
+    "modifier": {
+        "operation": "multiply_total",
+        "value": 0.6,
+        "name": "Aquanaut Water Slip"
+    },
+    "condition": {
+        "type": "origins:in_block",
+        "block_condition": {
+            "type": "origins:fluid",
+            "fluid_condition": {
+                "type": "origins:in_tag",
+                "tag": "minecraft:water"
+            }
+        }
+    },
+    "hidden": true
+}

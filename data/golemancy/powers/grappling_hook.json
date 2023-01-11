@@ -1,0 +1,271 @@
+{
+    "type": "origins:active_self",
+    "cooldown": 60,
+    "hud_render": {
+        "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+        "bar_index": 3
+    },
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:raycast",
+                "distance": 24,
+                "fluid_handling": "none",
+                "shape_type": "collider",
+                "bientity_action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:actor_action",
+                            "action": {
+                                "type": "origins:apply_effect",
+                                "effect": {
+                                    "effect": "minecraft:slowness",
+                                    "duration": 10,
+                                    "amplifier": 9
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:target_action",
+                            "action": {
+                                "type": "origins:apply_effect",
+                                "effect": {
+                                    "effect": "minecraft:slowness",
+                                    "duration": 10,
+                                    "amplifier": 9
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:delay",
+                            "ticks": 10,
+                            "action": {
+                                "type": "origins:and",
+                                "actions": [
+                                    {
+                                        "type": "origins:if_else",
+                                        "condition": {
+                                            "type": "origins:target_condition",
+                                            "condition": {
+                                                "type": "origins:entity_type",
+                                                "entity_type": "minecraft:item"
+                                            }
+                                        },
+                                        "if_action": {
+                                            "type": "origins:and",
+                                            "actions": [
+                                                {
+                                                    "type": "origins:target_action",
+                                                    "action": {
+                                                        "type": "origins:execute_command",
+                                                        "command": "execute as @e[type=minecraft:item,distance=..4] run tag @s add lde_dredge_line"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "origins:actor_action",
+                                                    "action": {
+                                                        "type": "origins:area_of_effect",
+                                                        "radius": 24,
+                                                        "bientity_action": {
+                                                            "type": "origins:and",
+                                                            "actions": [
+                                                                {
+                                                                    "type": "origins:add_velocity",
+                                                                    "set": true,
+                                                                    "x": 0,
+                                                                    "y": 0,
+                                                                    "z": -2.5
+                                                                },
+                                                                {
+                                                                    "type": "origins:target_action",
+                                                                    "action": {
+                                                                        "type": "origins:execute_command",
+                                                                        "command": "tag @s remove lde_dredge_line"
+                                                                    }
+                                                                }
+                                                            ]
+                                                        },
+                                                        "bientity_condition": {
+                                                            "type": "origins:target_condition",
+                                                            "condition": {
+                                                                "type": "origins:command",
+                                                                "command": "execute if entity @s[tag=lde_dredge_line]",
+                                                                "comparison": "==",
+                                                                "compare_to": 1
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "origins:add_velocity",
+                                        "set": true,
+                                        "x": 0,
+                                        "y": 0,
+                                        "z": -1.5
+                                    },
+                                    {
+                                        "type": "origins:target_action",
+                                        "action": {
+                                            "type": "origins:execute_command",
+                                            "command": "particle minecraft:dust_color_transition 0 0 0.2 1.5 0.6 0.6 1 ~ ~1 ~ 0.5 0.5 0.5 4 5"
+                                        }
+                                    },
+                                    {
+                                        "type": "origins:actor_action",
+                                        "action": {
+                                            "type": "origins:and",
+                                            "actions": [
+                                                {
+                                                    "type": "origins:play_sound",
+                                                    "sound": "minecraft:entity.drowned.shoot",
+                                                    "volume": 0.45,
+                                                    "pitch": 1.4
+                                                },
+                                                {
+                                                    "type": "origins:play_sound",
+                                                    "sound": "minecraft:entity.blaze.shoot",
+                                                    "volume": 0.45,
+                                                    "pitch": 2
+                                                },
+                                                {
+                                                    "type": "origins:play_sound",
+                                                    "sound": "minecraft:entity.player.splash.high_speed",
+                                                    "volume": 0.45,
+                                                    "pitch": 0.8
+                                                },
+                                                {
+                                                    "type": "origins:play_sound",
+                                                    "sound": "minecraft:entity.iron_golem.damage",
+                                                    "volume": 0.45,
+                                                    "pitch": 0.5
+                                                },
+                                                {
+                                                    "type": "origins:play_sound",
+                                                    "sound": "minecraft:entity.iron_golem.death",
+                                                    "volume": 0.45,
+                                                    "pitch": 0.9
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                "block_action": {
+                    "type": "origins:execute_command",
+                    "command": "scoreboard players set lde_dummy golemancy_aquanaut_grappling_block 1"
+                },
+                "command_along_ray": "particle minecraft:dust 0.1 0.15 0.3 1 ~ ~ ~ 0 0 0 1 10",
+                "command_step": 0.25,
+                "command_at_hit": "particle minecraft:dust_color_transition 0 0 0.2 3 0.6 0.6 1 ~ ~1 ~ 0.5 0.5 0.5 4 12",
+                "hit_action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:play_sound",
+                            "sound": "minecraft:block.respawn_anchor.charge",
+                            "volume": 0.45,
+                            "pitch": 2
+                        },
+                        {
+                            "type": "origins:play_sound",
+                            "sound": "minecraft:block.anvil.place",
+                            "volume": 0.3,
+                            "pitch": 0.5
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "origins:delay",
+                "ticks": 1,
+                "action": {
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:command",
+                        "command": "scoreboard players get lde_dummy golemancy_aquanaut_grappling_block",
+                        "compare_to": 1,
+                        "comparison": "=="
+                    },
+                    "if_action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:add_velocity",
+                                "x": 0,
+                                "y": 0.1,
+                                "z": 2.5,
+                                "space": "local",
+                                "set": true
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "scoreboard players set lde_dummy golemancy_aquanaut_grappling_block 0"
+                            },
+                            {
+                                "type": "origins:play_sound",
+                                "sound": "minecraft:entity.drowned.shoot",
+                                "volume": 0.45,
+                                "pitch": 1.4
+                            },
+                            {
+                                "type": "origins:play_sound",
+                                "sound": "minecraft:entity.blaze.shoot",
+                                "volume": 0.45,
+                                "pitch": 2
+                            },
+                            {
+                                "type": "origins:play_sound",
+                                "sound": "minecraft:entity.player.splash.high_speed",
+                                "volume": 0.45,
+                                "pitch": 0.8
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "entity.drowned.shoot",
+                "volume": 0.45,
+                "pitch": 1.4
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "entity.blaze.shoot",
+                "volume": 0.45,
+                "pitch": 2
+            }
+        ]
+    },
+    "key": {
+        "key": "key.origins.primary_active"
+    },
+    "condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:in_block",
+                "block_condition": {
+                    "type": "origins:fluid",
+                    "fluid_condition": {
+                        "type": "origins:in_tag",
+                        "tag": "minecraft:water"
+                    }
+                }
+            },
+            {
+                "type": "origins:in_rain"
+            }
+        ]
+    },
+    "name": "Dredge Line",
+    "description": "While in water, you can fire a grappling hook to pull yourself to blocks, or entities to you."
+}

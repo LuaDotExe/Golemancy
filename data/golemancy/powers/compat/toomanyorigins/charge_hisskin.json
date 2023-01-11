@@ -1,0 +1,39 @@
+{
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:name",
+        "name": "lightningBolt"
+    },
+    "self_action": {
+        "type": "origins:area_of_effect",
+        "radius": 5,
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:living"
+                    },
+                    {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:player"
+                    },
+                    {
+                        "type": "origins:origin",
+                        "layer": "origins:origin",
+                        "origin": "toomanyorigins:hisskin"
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:execute_command",
+                "command": "effect give @s toomanyorigins:charged 300 0"
+            }
+        }
+    },
+    "hidden": true
+}

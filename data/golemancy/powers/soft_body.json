@@ -1,0 +1,11 @@
+{
+	"type": "origins:attribute",
+	"modifier": {
+		"attribute": "minecraft:generic.max_health",
+		"operation": "addition",
+		"value": -2,
+		"name": "Living Doll Reduced Health"
+	},
+	"name": "Soft Body",
+	"description": "You have one less heart of health."
+}

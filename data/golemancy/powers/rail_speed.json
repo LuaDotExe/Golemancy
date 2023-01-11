@@ -1,0 +1,347 @@
+{
+    "type": "origins:multiple",
+    "timer": {
+        "type": "origins:cooldown",
+        "cooldown": 400,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "reset": {
+        "type": "origins:action_over_time",
+        "interval": 4,
+        "entity_action": {
+            "type": "origins:trigger_cooldown",
+            "power": "golemancy:rail_speed_timer"
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "golemancy:rail_speed_grace_timer",
+            "comparison": "==",
+            "compare_to": 0
+        }
+    },
+    "grace_timer": {
+        "type": "origins:cooldown",
+        "cooldown": 20,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "grace_reset": {
+        "type": "origins:action_over_time",
+        "interval": 2,
+        "entity_action": {
+            "type": "origins:trigger_cooldown",
+            "power": "golemancy:rail_speed_grace_timer"
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:moving"
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:in_block",
+                            "block_condition": {
+                                "type": "origins:offset",
+                                "y": -1,
+                                "condition": {
+                                    "type": "origins:in_tag",
+                                    "tag": "minecraft:rails"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:in_block",
+                            "block_condition": {
+                                "type": "origins:in_tag",
+                                "tag": "minecraft:rails"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "low": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.movement_speed",
+            "operation": "multiply_total",
+            "value": 0.2,
+            "name": "Rail Speed Low"
+        },
+        "tick_rate": 3,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "golemancy:rail_speed_timer",
+                    "comparison": ">",
+                    "compare_to": 260
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "golemancy:rail_speed_timer",
+                    "comparison": "<=",
+                    "compare_to": 360
+                }
+            ]
+        }
+    },
+    "medium": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.movement_speed",
+            "operation": "multiply_total",
+            "value": 0.4,
+            "name": "Rail Speed Medium"
+        },
+        "tick_rate": 3,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "golemancy:rail_speed_timer",
+                    "comparison": ">",
+                    "compare_to": 160
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "golemancy:rail_speed_timer",
+                    "comparison": "<=",
+                    "compare_to": 260
+                }
+            ]
+        }
+    },
+    "medium_high": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.movement_speed",
+            "operation": "multiply_total",
+            "value": 0.6,
+            "name": "Rail Speed Medium High"
+        },
+        "tick_rate": 3,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "golemancy:rail_speed_timer",
+                    "comparison": ">",
+                    "compare_to": 100
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "golemancy:rail_speed_timer",
+                    "comparison": "<=",
+                    "compare_to": 160
+                }
+            ]
+        }
+    },
+    "high": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.movement_speed",
+            "operation": "multiply_total",
+            "value": 0.8,
+            "name": "Rail Speed High"
+        },
+        "tick_rate": 3,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "golemancy:rail_speed_timer",
+                    "comparison": ">",
+                    "compare_to": 10
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "golemancy:rail_speed_timer",
+                    "comparison": "<=",
+                    "compare_to": 100
+                }
+            ]
+        }
+    },
+    "full": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.movement_speed",
+            "operation": "multiply_total",
+            "value": 1.0,
+            "name": "Rail Speed Full"
+        },
+        "tick_rate": 3,
+        "condition": {
+            "type": "origins:resource",
+            "resource": "golemancy:rail_speed_timer",
+            "comparison": "<=",
+            "compare_to": 10
+        }
+    },
+    "trample": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:area_of_effect",
+            "radius": 1.2,
+            "include_target": false,
+            "bientity_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:damage",
+                        "amount": 5,
+                        "source": {
+                            "name": "cramming",
+                            "bypasses_armor": true,
+                            "unblockable": true
+                        }
+                    },
+                    {
+                        "type": "origins:add_velocity",
+                        "y": 1,
+                        "z": 1
+                    },
+                    {
+                        "type": "origins:target_action",
+                        "action": {
+                            "type": "origins:grant_power",
+                            "power": "golemancy:rail_speed_trample_grace",
+                            "source": "golemancy:steam_powered"
+                        }
+                    },
+                    {
+                        "type": "origins:actor_action",
+                        "action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:play_sound",
+                                    "sound": "minecraft:entity.wither.break_block",
+                                    "pitch": 0.8,
+                                    "volume": 0.5
+                                },
+                                {
+                                    "type": "origins:play_sound",
+                                    "sound": "minecraft:entity.wither_skeleton.hurt",
+                                    "pitch": 0.5,
+                                    "volume": 1
+                                },
+                                {
+                                    "type": "origins:play_sound",
+                                    "sound": "minecraft:block.anvil.place",
+                                    "pitch": 0.5,
+                                    "volume": 1
+                                },
+                                {
+                                    "type": "origins:play_sound",
+                                    "sound": "minecraft:entity.generic.explode",
+                                    "pitch": 1.35,
+                                    "volume": 1
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "bientity_condition": {
+                "type": "origins:target_condition",
+                "condition": {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:living"
+                        },
+                        {
+                            "type": "origins:power",
+                            "power": "golemancy:rail_speed_trample_grace",
+                            "source": "golemancy:steam_powered",
+                            "inverted": true
+                        }
+                    ]
+                }
+            }
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "golemancy:rail_speed_timer",
+                    "comparison": "<=",
+                    "compare_to": 10
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute if entity @e[distance=..2]",
+                    "comparison": ">",
+                    "compare_to": 1
+                }
+            ]
+        }
+    },
+    "step": {
+        "type": "origins:action_over_time",
+        "interval": 2,
+        "rising_action": {
+            "type": "origins:execute_command",
+            "command": "scale add pehkui:step_height 1"
+        },
+        "falling_action": {
+            "type": "origins:execute_command",
+            "command": "scale subtract pehkui:step_height 1"
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:moving"
+                },
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:in_block",
+                            "block_condition": {
+                                "type": "origins:offset",
+                                "y": -1,
+                                "condition": {
+                                    "type": "origins:in_tag",
+                                    "tag": "minecraft:rails"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:in_block",
+                            "block_condition": {
+                                "type": "origins:in_tag",
+                                "tag": "minecraft:rails"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "name": "Subway Surfer",
+    "description": "Continuous movement on rails builds up additional movement speed.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/star.png",
+            "text": "You can also craft rails more efficiently."
+        }
+    ]
+}

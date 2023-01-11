@@ -1,0 +1,165 @@
+{
+	"type": "origins:multiple",
+	"sword": {
+		"type": "origins:recipe",
+		"recipe": {
+			"type": "minecraft:crafting_shaped",
+			"id": "golemancy:copper_sword",
+			"pattern": [
+				"#",
+				"#",
+				"S"
+			],
+			"key": {
+				"#": {
+					"item": "minecraft:copper_ingot"
+				},
+				"S": {
+					"item": "minecraft:stick"
+				}
+			},
+			"result": {
+				"item": "minecraft:iron_sword",
+				"count": 1
+			}
+		}
+	},
+	"pickaxe": {
+		"type": "origins:recipe",
+		"recipe": {
+			"type": "minecraft:crafting_shaped",
+			"id": "golemancy:copper_pickaxe",
+			"pattern": [
+				"###",
+				" S ",
+				" S "
+			],
+			"key": {
+				"#": {
+					"item": "minecraft:copper_ingot"
+				},
+				"S": {
+					"item": "minecraft:stick"
+				}
+			},
+			"result": {
+				"item": "minecraft:iron_pickaxe",
+				"count": 1
+			}
+		}
+	},
+	"shovel": {
+		"type": "origins:recipe",
+		"recipe": {
+			"type": "minecraft:crafting_shaped",
+			"id": "golemancy:copper_shovel",
+			"pattern": [
+				"#",
+				"S",
+				"S"
+			],
+			"key": {
+				"#": {
+					"item": "minecraft:copper_ingot"
+				},
+				"S": {
+					"item": "minecraft:stick"
+				}
+			},
+			"result": {
+				"item": "minecraft:iron_shovel",
+				"count": 1
+			}
+		}
+	},
+	"axe": {
+		"type": "origins:recipe",
+		"recipe": {
+			"type": "minecraft:crafting_shaped",
+			"id": "golemancy:copper_axe",
+			"pattern": [
+				"##",
+				"#S",
+				" S"
+			],
+			"key": {
+				"#": {
+					"item": "minecraft:copper_ingot"
+				},
+				"S": {
+					"item": "minecraft:stick"
+				}
+			},
+			"result": {
+				"item": "minecraft:iron_axe",
+				"count": 1
+			}
+		}
+	},
+	"shield": {
+		"type": "origins:recipe",
+		"recipe": {
+			"type": "minecraft:crafting_shaped",
+			"id": "golemancy:copper_shield",
+			"pattern": [
+				"P#P",
+				"PPP",
+				" P "
+			],
+			"key": {
+				"#": {
+					"item": "minecraft:copper_ingot"
+				},
+				"P": {
+					"tag": "minecraft:planks"
+				}
+			},
+			"result": {
+				"item": "minecraft:shield",
+				"count": 1
+			}
+		}
+	},
+	"bucket": {
+		"type": "origins:recipe",
+		"recipe": {
+			"type": "minecraft:crafting_shaped",
+			"id": "golemancy:copper_bucket",
+			"pattern": [
+				"# #",
+				" # "
+			],
+			"key": {
+				"#": {
+					"item": "minecraft:copper_ingot"
+				}
+			},
+			"result": {
+				"item": "minecraft:bucket",
+				"count": 1
+			}
+		}
+	},
+	"shears": {
+		"type": "origins:recipe",
+		"recipe": {
+			"type": "minecraft:crafting_shaped",
+			"id": "golemancy:copper_shears",
+			"pattern": [
+				"# ",
+				" #"
+			],
+			"key": {
+				"#": {
+					"item": "minecraft:copper_ingot"
+				}
+			},
+			"result": {
+				"item": "minecraft:shears",
+				"count": 1
+			}
+		}
+	},
+	"name": "Metalworker",
+	"description": "Because of your familiarity with copper as a material, you can use it to craft certain tools and items more easily."
+}

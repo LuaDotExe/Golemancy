@@ -1,0 +1,17 @@
+{
+	"powers": [
+		"golemancy:magma_armor",
+		"golemancy:lava_swim",
+		"golemancy:nether_spawn",
+		"golemancy:antiburn",
+		"golemancy:sleepless",
+		"golemancy:molten_core",
+		"origins:water_vulnerability",
+		"golemancy:bastion_trident"
+	],
+	"icon": "minecraft:magma_block",
+	"order": 690,
+	"impact": 3,
+	"name": "Magmatist",
+	"description": "A viscous, molten construct, capable of traveling through lava at high speeds."
+}

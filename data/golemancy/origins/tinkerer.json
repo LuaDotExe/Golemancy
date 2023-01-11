@@ -1,0 +1,13 @@
+{
+	"powers": [
+		"golemancy:tinker",
+		"golemancy:blast_resistance",
+		"origins:no_shield",
+		"golemancy:tinker_music"
+	],
+	"icon": "minecraft:compass",
+	"order": 689,
+	"impact": 1,
+	"name": "Tinkerer",
+	"description": "A tool-centric inventor that adds extra functionality to pre-existing items."
+}

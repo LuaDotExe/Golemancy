@@ -1,0 +1,17 @@
+{
+	"powers": [
+		"golemancy:steam",
+		"golemancy:steam_engine",
+		"golemancy:rail_speed",
+		"golemancy:more_rails",
+		"golemancy:sink",
+		"golemancy:less_sleep",
+		"golemancy:more_exhaustion",
+		"golemancy:compat/pehkui/delay_step_height"
+	],
+	"icon": "minecraft:furnace_minecart",
+	"order": 692,
+	"impact": 1,
+	"name": "Steam-Powered",
+	"description": "A locomotive construct that converts steam into power."
+}

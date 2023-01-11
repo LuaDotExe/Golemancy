@@ -1,0 +1,89 @@
+{
+	"type": "origins:action_over_time",
+	"interval": 20,
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:chance",
+				"chance": 0.025,
+				"action": {
+					"type": "origins:equipped_item_action",
+					"equipment_slot": "mainhand",
+					"action": {
+						"type": "origins:damage",
+						"amount": -1,
+						"ignore_unbreaking": true
+					}
+				}
+			},
+			{
+				"type": "origins:chance",
+				"chance": 0.025,
+				"action": {
+					"type": "origins:equipped_item_action",
+					"equipment_slot": "offhand",
+					"action": {
+						"type": "origins:damage",
+						"amount": -1,
+						"ignore_unbreaking": true
+					}
+				}
+			},
+			{
+				"type": "origins:chance",
+				"chance": 0.025,
+				"action": {
+					"type": "origins:equipped_item_action",
+					"equipment_slot": "head",
+					"action": {
+						"type": "origins:damage",
+						"amount": -1,
+						"ignore_unbreaking": true
+					}
+				}
+			},
+			{
+				"type": "origins:chance",
+				"chance": 0.025,
+				"action": {
+					"type": "origins:equipped_item_action",
+					"equipment_slot": "chest",
+					"action": {
+						"type": "origins:damage",
+						"amount": -1,
+						"ignore_unbreaking": true
+					}
+				}
+			},
+			{
+				"type": "origins:chance",
+				"chance": 0.025,
+				"action": {
+					"type": "origins:equipped_item_action",
+					"equipment_slot": "legs",
+					"action": {
+						"type": "origins:damage",
+						"amount": -1,
+						"ignore_unbreaking": true
+					}
+				}
+			},
+			{
+				"type": "origins:chance",
+				"chance": 0.025,
+				"action": {
+					"type": "origins:equipped_item_action",
+					"equipment_slot": "feet",
+					"action": {
+						"type": "origins:damage",
+						"amount": -1,
+						"ignore_unbreaking": true
+					}
+				}
+			}
+		]
+	},
+	"name": "Natura Arcana",
+	"description": "Your tools and armor slowly mend over time."
+}

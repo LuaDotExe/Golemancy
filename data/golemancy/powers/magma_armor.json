@@ -1,0 +1,18 @@
+{
+	"type": "origins:multiple",
+	"fire": {
+		"type": "origins:attacker_action_when_hit",
+		"entity_action": {
+			"type": "origins:set_on_fire",
+			"duration": 30
+		},
+		"cooldown": 1
+	},
+	"particle": {
+		"type": "origins:particle",
+		"particle": "falling_lava",
+		"frequency": 3
+	},
+	"name": "Magma Armor",
+	"description": "Enemies that attack you are set ablaze."
+}
