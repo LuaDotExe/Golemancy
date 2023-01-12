@@ -3,6 +3,7 @@
 		"golemancy:tinker",
 		"golemancy:blast_resistance",
 		"origins:no_shield",
+		"golemancy:light_frame",
 		"golemancy:tinker_music"
 	],
 	"icon": "minecraft:compass",
