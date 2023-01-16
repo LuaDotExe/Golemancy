@@ -58,6 +58,10 @@
 				{
 					"type": "origins:in_rain",
 					"inverted": true
+				},
+				{
+					"type": "origins:creative_flying",
+					"inverted": true
 				}
 			]
 		}

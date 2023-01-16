@@ -248,7 +248,7 @@
 										{
 											"type": "origins:change_resource",
 											"resource": "golemancy:tinker_cooldown",
-											"change": 200
+											"change": 240
 										},
 										{
 											"type": "origins:equipped_item_action",
@@ -262,7 +262,7 @@
 											"type": "origins:apply_effect",
 											"effect": {
 												"effect": "minecraft:speed",
-												"amplifier": 4,
+												"amplifier": 3,
 												"duration": 40
 											}
 										},

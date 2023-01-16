@@ -6,7 +6,7 @@
 		"actions": [
 			{
 				"type": "origins:chance",
-				"chance": 0.025,
+				"chance": 0.04,
 				"action": {
 					"type": "origins:equipped_item_action",
 					"equipment_slot": "mainhand",
@@ -19,7 +19,7 @@
 			},
 			{
 				"type": "origins:chance",
-				"chance": 0.025,
+				"chance": 0.04,
 				"action": {
 					"type": "origins:equipped_item_action",
 					"equipment_slot": "offhand",
@@ -32,7 +32,7 @@
 			},
 			{
 				"type": "origins:chance",
-				"chance": 0.025,
+				"chance": 0.04,
 				"action": {
 					"type": "origins:equipped_item_action",
 					"equipment_slot": "head",
@@ -45,7 +45,7 @@
 			},
 			{
 				"type": "origins:chance",
-				"chance": 0.025,
+				"chance": 0.04,
 				"action": {
 					"type": "origins:equipped_item_action",
 					"equipment_slot": "chest",
@@ -58,7 +58,7 @@
 			},
 			{
 				"type": "origins:chance",
-				"chance": 0.025,
+				"chance": 0.04,
 				"action": {
 					"type": "origins:equipped_item_action",
 					"equipment_slot": "legs",
@@ -71,7 +71,7 @@
 			},
 			{
 				"type": "origins:chance",
-				"chance": 0.025,
+				"chance": 0.04,
 				"action": {
 					"type": "origins:equipped_item_action",
 					"equipment_slot": "feet",

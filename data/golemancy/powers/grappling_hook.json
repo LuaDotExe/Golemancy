@@ -67,7 +67,7 @@
                                                     "type": "origins:actor_action",
                                                     "action": {
                                                         "type": "origins:area_of_effect",
-                                                        "radius": 24,
+                                                        "radius": 29,
                                                         "bientity_action": {
                                                             "type": "origins:and",
                                                             "actions": [
@@ -233,13 +233,13 @@
             },
             {
                 "type": "origins:play_sound",
-                "sound": "entity.drowned.shoot",
+                "sound": "minecraft:entity.drowned.shoot",
                 "volume": 0.45,
                 "pitch": 1.4
             },
             {
                 "type": "origins:play_sound",
-                "sound": "entity.blaze.shoot",
+                "sound": "minecraft:entity.blaze.shoot",
                 "volume": 0.45,
                 "pitch": 2
             }
