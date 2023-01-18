@@ -354,23 +354,12 @@
 			]
 		}
 	},
-	"heal_sleep": {
-		"type": "origins:action_on_wake_up",
-		"entity_action": {
-			"type": "origins:heal",
-			"amount": 20
-		}
-	},
 	"name": "Patchwork Body",
 	"description": "Your body doesn't heal naturally. Instead, you can heal your wounds by consuming Wool and String.",
 	"badges": [
 		{
 			"sprite": "origins:textures/gui/badge/active.png",
 			"text": "Active ability, use with %s while holding Wool or String in your hands."
-		},
-		{
-			"sprite": "origins:textures/gui/badge/star.png",
-			"text": "You fully heal whenever you wake up."
 		}
 	]
 }

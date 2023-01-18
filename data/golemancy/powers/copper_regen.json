@@ -8,194 +8,194 @@
 		"entity_action": {
 			"type": "origins:if_else_list",
 			"actions": [
-			{
-				"condition": {
-					"type": "origins:equipped_item",
-					"equipment_slot": "mainhand",
-					"item_condition": {
-						"type": "origins:ingredient",
-						"ingredient": {
-							"item": "minecraft:copper_ingot"
-						}
-					}
-				},
-				"action": {
-					"type": "origins:and",
-					"actions": [
-					{
-						"type": "origins:equipped_item_action",
+				{
+					"condition": {
+						"type": "origins:equipped_item",
 						"equipment_slot": "mainhand",
-						"action": {
-							"type": "origins:consume",
-							"amount": 1
+						"item_condition": {
+							"type": "origins:ingredient",
+							"ingredient": {
+								"item": "minecraft:copper_ingot"
+							}
 						}
 					},
-					{
-						"type": "origins:heal",
-						"amount": 2
-					},
-					{
-						"type": "origins:delay",
-						"ticks": 3,
-						"action": {
-							"type": "origins:heal",
-							"amount": 2
-						}
-					},
-					{
-						"type": "origins:delay",
-						"ticks": 5,
-						"action": {
-							"type": "origins:heal",
-							"amount": 1
-						}
-					},
-					{
-						"type": "origins:play_sound",
-						"sound": "minecraft:block.anvil.use",
-						"pitch": 1.1,
-						"volume": 0.5
-					}
-					]
-				}
-			},
-			{
-				"condition": {
-					"type": "origins:equipped_item",
-					"equipment_slot": "offhand",
-					"item_condition": {
-						"type": "origins:ingredient",
-						"ingredient": {
-							"item": "minecraft:copper_ingot"
-						}
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:equipped_item_action",
+								"equipment_slot": "mainhand",
+								"action": {
+									"type": "origins:consume",
+									"amount": 1
+								}
+							},
+							{
+								"type": "origins:heal",
+								"amount": 2
+							},
+							{
+								"type": "origins:delay",
+								"ticks": 3,
+								"action": {
+									"type": "origins:heal",
+									"amount": 2
+								}
+							},
+							{
+								"type": "origins:delay",
+								"ticks": 5,
+								"action": {
+									"type": "origins:heal",
+									"amount": 1
+								}
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "minecraft:block.anvil.use",
+								"pitch": 1.1,
+								"volume": 0.5
+							}
+						]
 					}
 				},
-				"action": {
-					"type": "origins:and",
-					"actions": [
-					{
-						"type": "origins:equipped_item_action",
+				{
+					"condition": {
+						"type": "origins:equipped_item",
 						"equipment_slot": "offhand",
-						"action": {
-							"type": "origins:consume",
-							"amount": 1
+						"item_condition": {
+							"type": "origins:ingredient",
+							"ingredient": {
+								"item": "minecraft:copper_ingot"
+							}
 						}
 					},
-					{
-						"type": "origins:heal",
-						"amount": 2
-					},
-					{
-						"type": "origins:delay",
-						"ticks": 3,
-						"action": {
-							"type": "origins:heal",
-							"amount": 2
-						}
-					},
-					{
-						"type": "origins:delay",
-						"ticks": 5,
-						"action": {
-							"type": "origins:heal",
-							"amount": 1
-						}
-					},
-					{
-						"type": "origins:play_sound",
-						"sound": "minecraft:block.anvil.use",
-						"pitch": 1.1,
-						"volume": 0.5
-					}
-					]
-				}
-			},
-			{
-				"condition": {
-					"type": "origins:equipped_item",
-					"equipment_slot": "mainhand",
-					"item_condition": {
-						"type": "origins:ingredient",
-						"ingredient": {
-							"tag": "golemancy:copper_nugget"
-						}
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:equipped_item_action",
+								"equipment_slot": "offhand",
+								"action": {
+									"type": "origins:consume",
+									"amount": 1
+								}
+							},
+							{
+								"type": "origins:heal",
+								"amount": 2
+							},
+							{
+								"type": "origins:delay",
+								"ticks": 3,
+								"action": {
+									"type": "origins:heal",
+									"amount": 2
+								}
+							},
+							{
+								"type": "origins:delay",
+								"ticks": 5,
+								"action": {
+									"type": "origins:heal",
+									"amount": 1
+								}
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "minecraft:block.anvil.use",
+								"pitch": 1.1,
+								"volume": 0.5
+							}
+						]
 					}
 				},
-				"action": {
-					"type": "origins:and",
-					"actions": [
-					{
-						"type": "origins:equipped_item_action",
+				{
+					"condition": {
+						"type": "origins:equipped_item",
 						"equipment_slot": "mainhand",
-						"action": {
-							"type": "origins:consume",
-							"amount": 1
+						"item_condition": {
+							"type": "origins:ingredient",
+							"ingredient": {
+								"tag": "golemancy:copper_nugget"
+							}
 						}
 					},
-					{
-						"type": "origins:heal",
-						"amount": 1
-					},
-					{
-						"type": "origins:delay",
-						"ticks": 3,
-						"action": {
-							"type": "origins:heal",
-							"amount": 1
-						}
-					},
-					{
-						"type": "origins:play_sound",
-						"sound": "minecraft:block.anvil.use",
-						"pitch": 1.1,
-						"volume": 0.5
-					}
-					]
-				}
-			},
-			{
-				"condition": {
-					"type": "origins:equipped_item",
-					"equipment_slot": "offhand",
-					"item_condition": {
-						"type": "origins:ingredient",
-						"ingredient": {
-							"tag": "golemancy:copper_nugget"
-						}
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:equipped_item_action",
+								"equipment_slot": "mainhand",
+								"action": {
+									"type": "origins:consume",
+									"amount": 1
+								}
+							},
+							{
+								"type": "origins:heal",
+								"amount": 1
+							},
+							{
+								"type": "origins:delay",
+								"ticks": 3,
+								"action": {
+									"type": "origins:heal",
+									"amount": 1
+								}
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "minecraft:block.anvil.use",
+								"pitch": 1.1,
+								"volume": 0.5
+							}
+						]
 					}
 				},
-				"action": {
-					"type": "origins:and",
-					"actions": [
-					{
-						"type": "origins:equipped_item_action",
+				{
+					"condition": {
+						"type": "origins:equipped_item",
 						"equipment_slot": "offhand",
-						"action": {
-							"type": "origins:consume",
-							"amount": 1
+						"item_condition": {
+							"type": "origins:ingredient",
+							"ingredient": {
+								"tag": "golemancy:copper_nugget"
+							}
 						}
 					},
-					{
-						"type": "origins:heal",
-						"amount": 1
-					},
-					{
-						"type": "origins:delay",
-						"ticks": 3,
-						"action": {
-							"type": "origins:heal",
-							"amount": 1
-						}
-					},
-					{
-						"type": "origins:play_sound",
-						"sound": "minecraft:block.anvil.use",
-						"pitch": 1.1,
-						"volume": 0.5
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:equipped_item_action",
+								"equipment_slot": "offhand",
+								"action": {
+									"type": "origins:consume",
+									"amount": 1
+								}
+							},
+							{
+								"type": "origins:heal",
+								"amount": 1
+							},
+							{
+								"type": "origins:delay",
+								"ticks": 3,
+								"action": {
+									"type": "origins:heal",
+									"amount": 1
+								}
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "minecraft:block.anvil.use",
+								"pitch": 1.1,
+								"volume": 0.5
+							}
+						]
 					}
-					]
 				}
-			}
 			]
 		},
 		"cooldown": 200,
@@ -209,37 +209,37 @@
 		"condition": {
 			"type": "origins:and",
 			"conditions": [
-			{
-				"type": "origins:relative_health",
-				"comparison": "==",
-				"compare_to": 1,
-				"inverted": true
-			},
-			{
-				"type": "origins:or",
-				"conditions": [
 				{
-					"type": "origins:equipped_item",
-					"equipment_slot": "mainhand",
-					"item_condition": {
-						"type": "origins:ingredient",
-						"ingredient": {
-							"tag": "golemancy:copper_consumable"
-						}
-					}
+					"type": "origins:relative_health",
+					"comparison": "==",
+					"compare_to": 1,
+					"inverted": true
 				},
 				{
-					"type": "origins:equipped_item",
-					"equipment_slot": "offhand",
-					"item_condition": {
-						"type": "origins:ingredient",
-						"ingredient": {
-							"tag": "golemancy:copper_consumable"
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:equipped_item",
+							"equipment_slot": "mainhand",
+							"item_condition": {
+								"type": "origins:ingredient",
+								"ingredient": {
+									"tag": "golemancy:copper_consumable"
+								}
+							}
+						},
+						{
+							"type": "origins:equipped_item",
+							"equipment_slot": "offhand",
+							"item_condition": {
+								"type": "origins:ingredient",
+								"ingredient": {
+									"tag": "golemancy:copper_consumable"
+								}
+							}
 						}
-					}
+					]
 				}
-				]
-			}
 			]
 		}
 	},
@@ -253,9 +253,9 @@
 	"name": "Copper Core",
 	"description": "Your body cannot be naturally or magically mended. You can heal your wounds by consuming Copper Ingots.",
 	"badges": [
-	{
-		"sprite": "origins:textures/gui/badge/active.png",
-		"text": "Active ability, use with %s while holding Copper in your hands."
-	}
+		{
+			"sprite": "origins:textures/gui/badge/active.png",
+			"text": "Active ability, use with %s while holding Copper in your hands."
+		}
 	]
 }

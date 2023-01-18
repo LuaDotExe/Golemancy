@@ -21,6 +21,19 @@
 	"no_regen": {
 		"type": "origins:disable_regen"
 	},
+	"heal_sleep": {
+		"type": "origins:action_on_wake_up",
+		"entity_action": {
+			"type": "origins:heal",
+			"amount": 10
+		}
+	},
 	"name": "Construct Stomach",
-	"description": "Your body doesn't experience hunger, and you don't benefit from natural regeneration."
+	"description": "Your body doesn't experience hunger, and you don't benefit from natural regeneration.",
+	"badges": [
+		{
+			"sprite": "origins:textures/gui/badge/star.png",
+			"text": "You heal whenever you wake up."
+		}
+	]
 }

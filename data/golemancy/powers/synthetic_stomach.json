@@ -14,6 +14,19 @@
 			"name": "starve"
 		}
 	},
+	"heal_sleep": {
+		"type": "origins:action_on_wake_up",
+		"entity_action": {
+			"type": "origins:heal",
+			"amount": 6
+		}
+	},
 	"name": "Synthetic Stomach",
-	"description": "You need less food, and cannot starve to death."
+	"description": "You need less food, and cannot starve to death.",
+	"badges": [
+		{
+			"sprite": "origins:textures/gui/badge/star.png",
+			"text": "You heal whenever you wake up."
+		}
+	]
 }
