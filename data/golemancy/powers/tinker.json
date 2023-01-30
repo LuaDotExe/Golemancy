@@ -1926,6 +1926,160 @@
 										}
 									]
 								}
+							},
+							{
+								"condition": {
+									"type": "origins:equipped_item",
+									"equipment_slot": "offhand",
+									"item_condition": {
+										"type": "origins:and",
+										"conditions": [
+											{
+												"type": "origins:ingredient",
+												"ingredient": {
+													"item": "minecraft:knowledge_book"
+												}
+											},
+											{
+												"type": "origins:nbt",
+												"nbt": "{CustomModelData:10008,lde_nonconsume:1}"
+											}
+										]
+									}
+								},
+								"action": {
+									"type": "origins:and",
+									"actions": [
+										{
+											"type": "origins:change_resource",
+											"resource": "golemancy:tinker_cooldown",
+											"change": 40
+										},
+										{
+											"type": "origins:if_else",
+											"condition": {
+												"type": "origins:and",
+												"conditions": [
+													{
+														"type": "origins:dimension",
+														"dimension": "minecraft:the_end"
+													},
+													{
+														"type": "origins:advancement",
+														"advancement": "lde_seer:vantablack/terminus",
+														"inverted": true
+													}
+												]
+											},
+											"if_action": {
+												"type": "origins:and",
+												"actions": [
+													{
+														"type": "origins:execute_command",
+														"command": "advancement grant @s only lde_seer:vantablack/terminus"
+													},
+													{
+														"type": "origins:execute_command",
+														"command": "tellraw @s [\"<\",{\"text\":\"Aspect of the Spider\",\"color\":\"dark_red\"},\"> Knowledge unfettered.\"]"
+													},
+													{
+														"type": "origins:execute_command",
+														"command": "playsound minecraft:entity.spider.step master @s ~ ~ ~ 0.8 0.7"
+													},
+													{
+														"type": "origins:execute_command",
+														"command": "playsound minecraft:entity.warden.tendril_clicks master @s ~ ~ ~ 0.8 0.5"
+													}
+												]
+											},
+											"else_action": {
+												"type": "origins:and",
+												"actions": [
+													{
+														"type": "origins:execute_command",
+														"command": "function lde_seer:trinkets/spider_circle"
+													},
+													{
+														"type": "origins:execute_command",
+														"command": "playsound minecraft:entity.spider.step master @s ~ ~ ~ 0.8 0.7"
+													},
+													{
+														"type": "origins:execute_command",
+														"command": "playsound minecraft:entity.warden.tendril_clicks master @s ~ ~ ~ 0.8 0.5"
+													},
+													{
+														"type": "origins:choice",
+														"actions": [
+															{
+																"element": {
+																	"type": "origins:execute_command",
+																	"command": "tellraw @s [\"<\",{\"text\":\"Aspect of the Spider\",\"color\":\"dark_red\"},\"> Beware the moon.\"]"
+																},
+																"weight": 1
+															},
+															{
+																"element": {
+																	"type": "origins:execute_command",
+																	"command": "tellraw @s [\"<\",{\"text\":\"Aspect of the Spider\",\"color\":\"dark_red\"},\"> She sends Seekers. Run.\"]"
+																},
+																"weight": 1
+															},
+															{
+																"element": {
+																	"type": "origins:execute_command",
+																	"command": "tellraw @s [\"<\",{\"text\":\"Aspect of the Spider\",\"color\":\"dark_red\"},\"> Do not be misguided.\"]"
+																},
+																"weight": 1
+															},
+															{
+																"element": {
+																	"type": "origins:execute_command",
+																	"command": "tellraw @s [\"<\",{\"text\":\"Aspect of the Spider\",\"color\":\"dark_red\"},\"> Ancient altars at the end of space.\"]"
+																},
+																"weight": 1
+															},
+															{
+																"element": {
+																	"type": "origins:execute_command",
+																	"command": "tellraw @s [\"<\",{\"text\":\"Aspect of the Spider\",\"color\":\"dark_red\"},\"> Ancient altars at the end of space.\"]"
+																},
+																"weight": 1
+															},
+															{
+																"element": {
+																	"type": "origins:execute_command",
+																	"command": "tellraw @s [\"<\",{\"text\":\"Aspect of the Spider\",\"color\":\"dark_red\"},\"> \",{\"text\":\"VANTABLACK\",\"obfuscated\":true}]"
+																},
+																"weight": 3
+															},
+															{
+																"element": {
+																	"type": "origins:execute_command",
+																	"command": "tellraw @s [\"<\",{\"text\":\"Aspect of the Spider\",\"color\":\"dark_red\"},\"> \",{\"text\":\"SHE SEEKS THE STAR STRIDER.\",\"obfuscated\":true}]"
+																},
+																"weight": 3
+															},
+															{
+																"element": {
+																	"type": "origins:execute_command",
+																	"command": "tellraw @s [\"<\",{\"text\":\"Aspect of the Spider\",\"color\":\"dark_red\"},\"> \",{\"text\":\"HER MIND IS FRACTURED.\",\"obfuscated\":true}]"
+																},
+																"weight": 3
+															},
+															{
+																"element": {
+																	"type": "origins:execute_command",
+																	"command": "tellraw @s {\"text\":\"You hear indecipherable whispers...\",\"italic\":true,\"color\":\"gray\"}"
+																},
+																"weight": 11
+															}
+														]
+													}
+												]
+											}
+										}
+									]
+								}
 							}
 						]
 					},

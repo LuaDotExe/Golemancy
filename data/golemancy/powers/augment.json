@@ -1153,7 +1153,7 @@
 		},
 		{
 			"sprite": "origins:textures/gui/badge/arrow_up.png",
-			"text": "Upgrade order: Copper, Iron, Gold, Lapis Lazuli, Diamond, Netherite, and then XP."
+			"text": "Upgrade order: Copper (20), Iron (25), Gold (25), Lapis Lazuli (50), Diamond (25), Netherite (4), and then XP."
 		},
 		{
 			"sprite": "origins:textures/gui/badge/info.png",
