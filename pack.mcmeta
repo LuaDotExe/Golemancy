@@ -1,6 +1,6 @@
 {
 	"pack": {
-		"pack_format": 10,
-		"description": "Version 1.6.0 / By LuaDotExe. \nAdds nine new synthetic Origins."
+		"pack_format": 15,
+		"description": "Version 1.6.1 / By LuaDotExe. \nAdds nine new synthetic Origins."
 	}
 }

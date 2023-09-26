@@ -56,6 +56,22 @@
 			"amount": 6
 		}
 	},
+	"cherry": {
+		"type": "origins:modify_crafting",
+		"recipe": "minecraft:cherry_planks",
+		"result": {
+			"item": "minecraft:cherry_planks",
+			"amount": 6
+		}
+	},
+	"bamboo": {
+		"type": "origins:modify_crafting",
+		"recipe": "minecraft:bamboo_planks",
+		"result": {
+			"item": "minecraft:bamboo_planks",
+			"amount": 3
+		}
+	},
 	"name": "Nature's Gift",
 	"description": "Logs yield 6 planks, instead of 4."
 }

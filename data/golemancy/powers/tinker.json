@@ -1318,7 +1318,17 @@
 											"hit_bientity_condition": {
 												"type": "origins:target_condition",
 												"condition": {
-													"type": "origins:living"
+													"type": "origins:and",
+													"conditions": [
+														{
+															"type": "origins:living"
+														},
+														{
+															"type": "origins:in_tag",
+															"tag": "golemancy:tinker_mount_blacklist",
+															"inverted": true
+														}
+													]
 												}
 											},
 											"shape_type": "collider"
